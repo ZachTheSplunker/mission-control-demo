@@ -1,0 +1,695 @@
+{
+    "blockly": false,
+    "blockly_xml": "<xml></xml>",
+    "category": "Uncategorized",
+    "coa": {
+        "data": {
+            "description": "Choose which artifacts to protect.",
+            "edges": [
+                {
+                    "id": "port_2_to_port_6",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "6",
+                    "targetPort": "6_in"
+                },
+                {
+                    "id": "port_11_to_port_9",
+                    "sourceNode": "11",
+                    "sourcePort": "11_out",
+                    "targetNode": "9",
+                    "targetPort": "9_in"
+                },
+                {
+                    "id": "port_6_to_port_12",
+                    "sourceNode": "6",
+                    "sourcePort": "6_out",
+                    "targetNode": "12",
+                    "targetPort": "12_in"
+                },
+                {
+                    "id": "port_2_to_port_21",
+                    "sourceNode": "2",
+                    "sourcePort": "2_out",
+                    "targetNode": "21",
+                    "targetPort": "21_in"
+                },
+                {
+                    "id": "port_13_to_port_25",
+                    "sourceNode": "13",
+                    "sourcePort": "13_out",
+                    "targetNode": "25",
+                    "targetPort": "25_in"
+                },
+                {
+                    "id": "port_15_to_port_37",
+                    "sourceNode": "15",
+                    "sourcePort": "15_out",
+                    "targetNode": "37",
+                    "targetPort": "37_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_22_to_port_11",
+                    "sourceNode": "22",
+                    "sourcePort": "22_out",
+                    "targetNode": "11",
+                    "targetPort": "11_in"
+                },
+                {
+                    "id": "port_0_to_port_2",
+                    "sourceNode": "0",
+                    "sourcePort": "0_out",
+                    "targetNode": "2",
+                    "targetPort": "2_in"
+                },
+                {
+                    "id": "port_21_to_port_38",
+                    "sourceNode": "21",
+                    "sourcePort": "21_out",
+                    "targetNode": "38",
+                    "targetPort": "38_in"
+                },
+                {
+                    "id": "port_38_to_port_22",
+                    "sourceNode": "38",
+                    "sourcePort": "38_out",
+                    "targetNode": "22",
+                    "targetPort": "22_in"
+                },
+                {
+                    "id": "port_38_to_port_23",
+                    "sourceNode": "38",
+                    "sourcePort": "38_out",
+                    "targetNode": "23",
+                    "targetPort": "23_in"
+                },
+                {
+                    "id": "port_38_to_port_24",
+                    "sourceNode": "38",
+                    "sourcePort": "38_out",
+                    "targetNode": "24",
+                    "targetPort": "24_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_23_to_port_13",
+                    "sourceNode": "23",
+                    "sourcePort": "23_out",
+                    "targetNode": "13",
+                    "targetPort": "13_in"
+                },
+                {
+                    "conditions": [
+                        {
+                            "index": 0
+                        }
+                    ],
+                    "id": "port_24_to_port_15",
+                    "sourceNode": "24",
+                    "sourcePort": "24_out",
+                    "targetNode": "15",
+                    "targetPort": "15_in"
+                },
+                {
+                    "id": "port_12_to_port_21",
+                    "sourceNode": "12",
+                    "sourcePort": "12_out",
+                    "targetNode": "21",
+                    "targetPort": "21_in"
+                },
+                {
+                    "id": "port_25_to_port_1",
+                    "sourceNode": "25",
+                    "sourcePort": "25_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_37_to_port_1",
+                    "sourceNode": "37",
+                    "sourcePort": "37_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                },
+                {
+                    "id": "port_9_to_port_1",
+                    "sourceNode": "9",
+                    "sourcePort": "9_out",
+                    "targetNode": "1",
+                    "targetPort": "1_in"
+                }
+            ],
+            "hash": "cf1f96f8a5d61d7d97c3fd78264ef5ccacb23019",
+            "nodes": {
+                "0": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_start",
+                        "id": "0",
+                        "type": "start"
+                    },
+                    "errors": {},
+                    "id": "0",
+                    "type": "start",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 0
+                },
+                "1": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionName": "on_finish",
+                        "id": "1",
+                        "type": "end"
+                    },
+                    "errors": {},
+                    "id": "1",
+                    "type": "end",
+                    "warnings": {},
+                    "x": 360,
+                    "y": 1412
+                },
+                "11": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_zts_carbonblack_block_hash_1",
+                        "id": "11",
+                        "inputs": {
+                            "hash": {
+                                "datapaths": [
+                                    "get_values:custom_function:md5"
+                                ],
+                                "deduplicate": false
+                            }
+                        },
+                        "playbookName": "zts_carbonblack_block_hash",
+                        "playbookRepo": 2,
+                        "playbookRepoName": "local",
+                        "playbookType": "data",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "11",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 680,
+                    "y": 1100
+                },
+                "12": {
+                    "data": {
+                        "advanced": {
+                            "customName": "get task data",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 4,
+                        "functionName": "get_task_data",
+                        "id": "12",
+                        "inputParameters": [
+                            "get_tasks:action_result.data.*.parsed_response_body",
+                            "get_values:custom_function:incident_id"
+                        ],
+                        "outputVariables": [
+                            "urls"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "12",
+                    "type": "code",
+                    "userCode": "\n    playbook_info = phantom.get_playbook_info()\n    current_playbook_name = playbook_info[0]['name']\n    get_task_data__urls = []\n    for task in get_tasks_result_item_0[0]:\n        suggestions = task.get('suggestions', {})\n        playbooks = suggestions.get('playbooks', [])\n        for playbook in playbooks:\n            if playbook['name'] == current_playbook_name:\n                get_task_data__urls.append(f\"/incidents/{get_values__incident_id}/responseplans/{task['response_plan_id']}/phase/{task['phase_id']}/tasks/{task['id']}/notes\")\n\n",
+                    "warnings": {},
+                    "x": 430,
+                    "y": 444
+                },
+                "13": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_zts_azure_disable_user_1",
+                        "id": "13",
+                        "inputs": {
+                            "user": {
+                                "datapaths": [
+                                    "get_values:custom_function:user"
+                                ],
+                                "deduplicate": false
+                            }
+                        },
+                        "playbookName": "zts_azure_disable_user",
+                        "playbookRepo": 2,
+                        "playbookRepoName": "local",
+                        "playbookType": "data",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "13",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 0,
+                    "y": 1108
+                },
+                "15": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "playbook_zts_carbonblack_contain_asset_1",
+                        "id": "15",
+                        "inputs": {
+                            "device": {
+                                "datapaths": [
+                                    "get_values:custom_function:device"
+                                ],
+                                "deduplicate": false
+                            }
+                        },
+                        "playbookName": "zts_carbonblack_contain_asset",
+                        "playbookRepo": 2,
+                        "playbookRepoName": "local",
+                        "playbookType": "data",
+                        "synchronous": true,
+                        "type": "playbook"
+                    },
+                    "errors": {},
+                    "id": "15",
+                    "type": "playbook",
+                    "warnings": {},
+                    "x": 340,
+                    "y": 1100
+                },
+                "2": {
+                    "data": {
+                        "advanced": {
+                            "customName": "get values",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "get_values",
+                        "id": "2",
+                        "inputParameters": [],
+                        "outputVariables": [
+                            "md5",
+                            "incident_id",
+                            "user",
+                            "device"
+                        ],
+                        "type": "code"
+                    },
+                    "errors": {},
+                    "id": "2",
+                    "type": "code",
+                    "userCode": "\n    mc_container = phantom.get_container(container['id'])\n    get_values__incident_id = mc_container['external_id']\n    mc_summary_data = mc_container['data']['summary']\n    if isinstance(mc_summary_data, str):\n        mc_summary_data = json.loads(mc_summary_data)\n    get_values__md5 = mc_summary_data.get('MD5')\n    get_values__user = mc_summary_data.get('user')\n    get_values__device = mc_summary_data.get('dest')\n\n",
+                    "warnings": {},
+                    "x": 340,
+                    "y": 148
+                },
+                "21": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "functionId": 1,
+                        "functionName": "format_1",
+                        "id": "21",
+                        "parameters": [
+                            "get_values:custom_function:user",
+                            "get_values:custom_function:device",
+                            "get_values:custom_function:md5"
+                        ],
+                        "template": "Choose which artifacts to contain.\n\nUser: {0}\n\nDevice: {1}\n\nHash: {2}",
+                        "type": "format"
+                    },
+                    "errors": {},
+                    "id": "21",
+                    "type": "format",
+                    "warnings": {},
+                    "x": 340,
+                    "y": 592
+                },
+                "22": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "protect_prompt:action_result.summary.responses.0",
+                                        "value": "Yes"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "customName": "contain",
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            }
+                        ],
+                        "functionId": 1,
+                        "functionName": "decision_1",
+                        "id": "22",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "22",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 760,
+                    "y": 920
+                },
+                "23": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "protect_prompt:action_result.summary.responses.1",
+                                        "value": "Yes"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "customName": "contain",
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            }
+                        ],
+                        "functionId": 2,
+                        "functionName": "decision_2",
+                        "id": "23",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "23",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 80,
+                    "y": 920
+                },
+                "24": {
+                    "data": {
+                        "advanced": {
+                            "join": []
+                        },
+                        "conditions": [
+                            {
+                                "comparisons": [
+                                    {
+                                        "conditionIndex": 0,
+                                        "op": "==",
+                                        "param": "protect_prompt:action_result.summary.responses.2",
+                                        "value": "Yes"
+                                    }
+                                ],
+                                "conditionIndex": 0,
+                                "customName": "contain",
+                                "display": "If",
+                                "logic": "and",
+                                "type": "if"
+                            }
+                        ],
+                        "functionId": 3,
+                        "functionName": "decision_3",
+                        "id": "24",
+                        "type": "decision"
+                    },
+                    "errors": {},
+                    "id": "24",
+                    "type": "decision",
+                    "warnings": {},
+                    "x": 420,
+                    "y": 920
+                },
+                "25": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "mission_control"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 2,
+                        "functionName": "post_data_2",
+                        "id": "25",
+                        "parameters": {
+                            "body": {
+                                "functionId": 2,
+                                "parameters": [
+                                    "playbook_zts_azure_disable_user_1:playbook_output:note_title",
+                                    "playbook_zts_azure_disable_user_1:playbook_output:note_content"
+                                ],
+                                "template": "{{\"title\": \"{0}\", \"content\": {1}}}"
+                            },
+                            "location": "get_task_data:custom_function:urls"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "25",
+                    "type": "action",
+                    "userCode": "\n    parameters = []\n    playbook_zts_azure_disable_user_1_output_note_title = phantom.collect2(container=container, datapath=[\"playbook_zts_azure_disable_user_1:playbook_output:note_title\"])\n    playbook_zts_azure_disable_user_1_output_note_content = phantom.collect2(container=container, datapath=[\"playbook_zts_azure_disable_user_1:playbook_output:note_content\"])\n    playbook_zts_azure_disable_user_1_output_note_title_values = [item[0] for item in playbook_zts_azure_disable_user_1_output_note_title]\n    playbook_zts_azure_disable_user_1_output_note_content_values = [item[0] for item in playbook_zts_azure_disable_user_1_output_note_content]\n    data = []\n    for title, content in zip(playbook_zts_azure_disable_user_1_output_note_title_values, playbook_zts_azure_disable_user_1_output_note_content_values):\n        \n        data.append({\n            \"title\": title,\n            \"content\": content\n        })\n\n    if get_task_data__urls is not None:\n        for url in get_task_data__urls:\n            for item in data:\n                parameters.append({\n                    \"body\": json.dumps(item),\n                    \"location\": url,\n                })\n    phantom.debug(parameters)\n\n",
+                    "warnings": {},
+                    "x": 0,
+                    "y": 1264
+                },
+                "37": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "mission_control"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 3,
+                        "functionName": "post_data_3",
+                        "id": "37",
+                        "parameters": {
+                            "body": {
+                                "functionId": 3,
+                                "parameters": [
+                                    "playbook_zts_carbonblack_contain_asset_1:playbook_output:note_title",
+                                    "playbook_zts_carbonblack_contain_asset_1:playbook_output:note_content"
+                                ],
+                                "template": "{{\"title\": \"{0}\", \"content\": {1}}}"
+                            },
+                            "location": "get_task_data:custom_function:urls"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "37",
+                    "type": "action",
+                    "userCode": "\n    parameters = []\n    playbook_zts_carbonblack_contain_asset_1_output_note_title = phantom.collect2(container=container, datapath=[\"playbook_zts_carbonblack_contain_asset_1:playbook_output:note_title\"])\n    playbook_zts_carbonblack_contain_asset_1_output_note_content = phantom.collect2(container=container, datapath=[\"playbook_zts_carbonblack_contain_asset_1:playbook_output:note_content\"])\n    playbook_zts_carbonblack_contain_asset_1_output_note_title_values = [item[0] for item in playbook_zts_carbonblack_contain_asset_1_output_note_title]\n    playbook_zts_carbonblack_contain_asset_1_output_note_content_values = [item[0] for item in playbook_zts_carbonblack_contain_asset_1_output_note_content]\n    data = []\n    for title, content in zip(playbook_zts_carbonblack_contain_asset_1_output_note_title_values, playbook_zts_carbonblack_contain_asset_1_output_note_content_values):\n        \n        data.append({\n            \"title\": title,\n            \"content\": content\n        })\n\n    if get_task_data__urls is not None:\n        for url in get_task_data__urls:\n            for item in data:\n                parameters.append({\n                    \"body\": json.dumps(item),\n                    \"location\": url,\n                })\n    phantom.debug(parameters)\n\n",
+                    "warnings": {},
+                    "x": 340,
+                    "y": 1264
+                },
+                "38": {
+                    "data": {
+                        "advanced": {
+                            "customName": "protect prompt",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "approver": {
+                            "type": "role",
+                            "value": "mc_analyst_all_edit"
+                        },
+                        "functionId": 2,
+                        "functionName": "protect_prompt",
+                        "id": "38",
+                        "message": "{0}",
+                        "parameters": [
+                            "format_1:formatted_data"
+                        ],
+                        "responseTime": 30,
+                        "responses": [
+                            {
+                                "responseOptions": [
+                                    "Yes",
+                                    "No"
+                                ],
+                                "responsePrompt": "Block Hash",
+                                "responseType": "yes/no"
+                            },
+                            {
+                                "responseOptions": [
+                                    "Yes",
+                                    "No"
+                                ],
+                                "responsePrompt": "Disable User",
+                                "responseType": "yes/no"
+                            },
+                            {
+                                "responseOptions": [
+                                    "Yes",
+                                    "No"
+                                ],
+                                "responsePrompt": "Quarantine Device",
+                                "responseType": "yes/no"
+                            }
+                        ],
+                        "type": "prompt"
+                    },
+                    "errors": {},
+                    "id": "38",
+                    "type": "prompt",
+                    "warnings": {},
+                    "x": 420,
+                    "y": 740
+                },
+                "6": {
+                    "data": {
+                        "action": "get data",
+                        "actionType": "investigate",
+                        "advanced": {
+                            "customName": "get tasks",
+                            "customNameId": 0,
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "mission_control"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "get_tasks",
+                        "id": "6",
+                        "parameters": {
+                            "location": {
+                                "functionId": 1,
+                                "parameters": [
+                                    "get_values:custom_function:incident_id"
+                                ],
+                                "template": "/incidents/{0}/tasks"
+                            }
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "6",
+                    "type": "action",
+                    "warnings": {},
+                    "x": 430,
+                    "y": 296
+                },
+                "9": {
+                    "data": {
+                        "action": "post data",
+                        "actionType": "generic",
+                        "advanced": {
+                            "join": []
+                        },
+                        "connector": "HTTP",
+                        "connectorConfigs": [
+                            "mission_control"
+                        ],
+                        "connectorId": "290b7499-0374-4930-9cdc-5e9b05d65827",
+                        "connectorVersion": "v1",
+                        "functionId": 1,
+                        "functionName": "post_data_1",
+                        "id": "9",
+                        "parameters": {
+                            "body": {
+                                "functionId": 1,
+                                "parameters": [
+                                    "playbook_zts_carbonblack_block_hash_1:playbook_output:note_title",
+                                    "playbook_zts_carbonblack_block_hash_1:playbook_output:note_content"
+                                ],
+                                "template": "{{\"title\": \"{0}\", \"content\": {1}}}\n"
+                            },
+                            "location": "get_task_data:custom_function:urls"
+                        },
+                        "requiredParameters": [
+                            {
+                                "data_type": "string",
+                                "field": "location"
+                            }
+                        ],
+                        "type": "action"
+                    },
+                    "errors": {},
+                    "id": "9",
+                    "type": "action",
+                    "userCode": "\n    parameters = []\n    playbook_zts_carbonblack_block_hash_1_output_note_title = phantom.collect2(container=container, datapath=[\"playbook_zts_carbonblack_block_hash_1:playbook_output:note_title\"])\n    playbook_zts_carbonblack_block_hash_1_output_note_content = phantom.collect2(container=container, datapath=[\"playbook_zts_carbonblack_block_hash_1:playbook_output:note_content\"])\n    playbook_zts_carbonblack_block_hash_1_output_note_title_values = [item[0] for item in playbook_zts_carbonblack_block_hash_1_output_note_title]\n    playbook_zts_carbonblack_block_hash_1_output_note_content_values = [item[0] for item in playbook_zts_carbonblack_block_hash_1_output_note_content]\n    data = []\n    for title, content in zip(playbook_zts_carbonblack_block_hash_1_output_note_title_values, playbook_zts_carbonblack_block_hash_1_output_note_content_values):\n        \n        data.append({\n            \"title\": title,\n            \"content\": content\n        })\n\n    if get_task_data__urls is not None:\n        for url in get_task_data__urls:\n            for item in data:\n                parameters.append({\n                    \"body\": json.dumps(item),\n                    \"location\": url,\n                })\n    phantom.debug(parameters)\n    \n\n",
+                    "warnings": {},
+                    "x": 680,
+                    "y": 1264
+                }
+            },
+            "notes": "Choose which artifacts to protect."
+        },
+        "input_spec": null,
+        "output_spec": null,
+        "playbook_type": "automation",
+        "python_version": "3",
+        "schema": "5.0.9",
+        "version": "6.0.0.114228"
+    },
+    "create_time": "2023-03-16T07:41:02.650128+00:00",
+    "draft_mode": false,
+    "labels": [
+        "*"
+    ],
+    "tags": []
+}
