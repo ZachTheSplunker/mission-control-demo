@@ -1,6 +1,8 @@
 # Mission Control Remediation
 
-Useful playbooks to be used with Mission Control
+After adding the playbooks to Splunk Soar and updating the Response Plan you can launch an embeded playbook during the "Render Verdict" phase to automatically contain assets. By saying "no" to one of the actions still gives you the ability to follow-up with an "ad-hoc" action to contain an artifact.
+
+![MC Contain](img/mc_prompt.png)
 
 ## How do I use these playbooks?
 
