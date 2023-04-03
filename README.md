@@ -28,3 +28,7 @@ After adding the playbooks to Splunk Soar and updating the Response Plan you can
 4. Add the Playbook `Protect Users and Assets` to the task. 
 
 ![Response Plan](img/mc_response_plan.png)
+
+### Running the playbook
+
+Once you run the playbook, you will have to manually click the "bell" icon in the upper right of the screen to reveal the notifications. You can then select the prompt.
