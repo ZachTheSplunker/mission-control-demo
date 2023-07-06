@@ -160,10 +160,13 @@ def post_data_1(action=None, success=None, container=None, results=None, handle=
 def playbook_zts_carbonblack_block_hash_1(action=None, success=None, container=None, results=None, handle=None, filtered_artifacts=None, filtered_results=None, custom_function=None, **kwargs):
     phantom.debug("playbook_zts_carbonblack_block_hash_1() called")
 
+    data_summary_file_hash_value = container.get("data", {}).get("summary", {}).get("file_hash", None)
     get_values__md5 = json.loads(_ if (_ := phantom.get_run_data(key="get_values:md5")) != "" else "null")  # pylint: disable=used-before-assignment
 
+    hash_combined_value = phantom.concatenate(data_summary_file_hash_value, get_values__md5, dedup=True)
+
     inputs = {
-        "hash": get_values__md5,
+        "hash": hash_combined_value,
     }
 
     ################################################################################
@@ -176,8 +179,8 @@ def playbook_zts_carbonblack_block_hash_1(action=None, success=None, container=N
     ## Custom Code End
     ################################################################################
 
-    # call playbook "local/zts_carbonblack_block_hash", returns the playbook_run_id
-    playbook_run_id = phantom.playbook("local/zts_carbonblack_block_hash", container=container, name="playbook_zts_carbonblack_block_hash_1", callback=post_data_1, inputs=inputs)
+    # call playbook "mission-control-demo/zts_carbonblack_block_hash", returns the playbook_run_id
+    playbook_run_id = phantom.playbook("mission-control-demo/zts_carbonblack_block_hash", container=container, name="playbook_zts_carbonblack_block_hash_1", callback=post_data_1, inputs=inputs)
 
     return
 
@@ -224,8 +227,10 @@ def playbook_zts_azure_disable_user_1(action=None, success=None, container=None,
 
     get_values__user = json.loads(_ if (_ := phantom.get_run_data(key="get_values:user")) != "" else "null")  # pylint: disable=used-before-assignment
 
+    user_combined_value = phantom.concatenate(get_values__user, dedup=True)
+
     inputs = {
-        "user": get_values__user,
+        "user": user_combined_value,
     }
 
     ################################################################################
@@ -238,8 +243,8 @@ def playbook_zts_azure_disable_user_1(action=None, success=None, container=None,
     ## Custom Code End
     ################################################################################
 
-    # call playbook "local/zts_azure_disable_user", returns the playbook_run_id
-    playbook_run_id = phantom.playbook("local/zts_azure_disable_user", container=container, name="playbook_zts_azure_disable_user_1", callback=post_data_2, inputs=inputs)
+    # call playbook "mission-control-demo/zts_azure_disable_user", returns the playbook_run_id
+    playbook_run_id = phantom.playbook("mission-control-demo/zts_azure_disable_user", container=container, name="playbook_zts_azure_disable_user_1", callback=post_data_2, inputs=inputs)
 
     return
 
@@ -250,8 +255,10 @@ def playbook_zts_carbonblack_contain_asset_1(action=None, success=None, containe
 
     get_values__device = json.loads(_ if (_ := phantom.get_run_data(key="get_values:device")) != "" else "null")  # pylint: disable=used-before-assignment
 
+    device_combined_value = phantom.concatenate(get_values__device, dedup=True)
+
     inputs = {
-        "device": get_values__device,
+        "device": device_combined_value,
     }
 
     ################################################################################
@@ -264,8 +271,8 @@ def playbook_zts_carbonblack_contain_asset_1(action=None, success=None, containe
     ## Custom Code End
     ################################################################################
 
-    # call playbook "local/zts_carbonblack_contain_asset", returns the playbook_run_id
-    playbook_run_id = phantom.playbook("local/zts_carbonblack_contain_asset", container=container, name="playbook_zts_carbonblack_contain_asset_1", callback=post_data_3, inputs=inputs)
+    # call playbook "mission-control-demo/zts_carbonblack_contain_asset", returns the playbook_run_id
+    playbook_run_id = phantom.playbook("mission-control-demo/zts_carbonblack_contain_asset", container=container, name="playbook_zts_carbonblack_contain_asset_1", callback=post_data_3, inputs=inputs)
 
     return
 
@@ -320,7 +327,8 @@ def decision_1(action=None, success=None, container=None, results=None, handle=N
         container=container,
         conditions=[
             ["protect_prompt:action_result.summary.responses.0", "==", "Yes"]
-        ])
+        ],
+        delimiter=None)
 
     # call connected blocks if condition 1 matched
     if found_match_1:
@@ -339,7 +347,8 @@ def decision_2(action=None, success=None, container=None, results=None, handle=N
         container=container,
         conditions=[
             ["protect_prompt:action_result.summary.responses.1", "==", "Yes"]
-        ])
+        ],
+        delimiter=None)
 
     # call connected blocks if condition 1 matched
     if found_match_1:
@@ -358,7 +367,8 @@ def decision_3(action=None, success=None, container=None, results=None, handle=N
         container=container,
         conditions=[
             ["protect_prompt:action_result.summary.responses.2", "==", "Yes"]
-        ])
+        ],
+        delimiter=None)
 
     # call connected blocks if condition 1 matched
     if found_match_1:

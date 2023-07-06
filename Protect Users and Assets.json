@@ -1,7 +1,7 @@
 {
     "blockly": false,
     "blockly_xml": "<xml></xml>",
-    "category": "Uncategorized",
+    "category": "Demo",
     "coa": {
         "data": {
             "description": "Choose which artifacts to protect.",
@@ -148,7 +148,7 @@
                     "targetPort": "1_in"
                 }
             ],
-            "hash": "cf1f96f8a5d61d7d97c3fd78264ef5ccacb23019",
+            "hash": "d27764705659489248769ee4b48d1835e6538300",
             "nodes": {
                 "0": {
                     "data": {
@@ -164,7 +164,7 @@
                     "type": "start",
                     "warnings": {},
                     "x": 360,
-                    "y": 0
+                    "y": -1.2789769243681803e-13
                 },
                 "1": {
                     "data": {
@@ -193,14 +193,15 @@
                         "inputs": {
                             "hash": {
                                 "datapaths": [
+                                    "container:data.summary.file_hash",
                                     "get_values:custom_function:md5"
                                 ],
-                                "deduplicate": false
+                                "deduplicate": true
                             }
                         },
                         "playbookName": "zts_carbonblack_block_hash",
-                        "playbookRepo": 2,
-                        "playbookRepoName": "local",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mission-control-demo",
                         "playbookType": "data",
                         "synchronous": true,
                         "type": "playbook"
@@ -252,12 +253,12 @@
                                 "datapaths": [
                                     "get_values:custom_function:user"
                                 ],
-                                "deduplicate": false
+                                "deduplicate": true
                             }
                         },
                         "playbookName": "zts_azure_disable_user",
-                        "playbookRepo": 2,
-                        "playbookRepoName": "local",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mission-control-demo",
                         "playbookType": "data",
                         "synchronous": true,
                         "type": "playbook"
@@ -282,12 +283,12 @@
                                 "datapaths": [
                                     "get_values:custom_function:device"
                                 ],
-                                "deduplicate": false
+                                "deduplicate": true
                             }
                         },
                         "playbookName": "zts_carbonblack_contain_asset",
-                        "playbookRepo": 2,
-                        "playbookRepoName": "local",
+                        "playbookRepo": 3,
+                        "playbookRepoName": "mission-control-demo",
                         "playbookType": "data",
                         "synchronous": true,
                         "type": "playbook"
@@ -492,7 +493,7 @@
                     "userCode": "\n    parameters = []\n    playbook_zts_azure_disable_user_1_output_note_title = phantom.collect2(container=container, datapath=[\"playbook_zts_azure_disable_user_1:playbook_output:note_title\"])\n    playbook_zts_azure_disable_user_1_output_note_content = phantom.collect2(container=container, datapath=[\"playbook_zts_azure_disable_user_1:playbook_output:note_content\"])\n    playbook_zts_azure_disable_user_1_output_note_title_values = [item[0] for item in playbook_zts_azure_disable_user_1_output_note_title]\n    playbook_zts_azure_disable_user_1_output_note_content_values = [item[0] for item in playbook_zts_azure_disable_user_1_output_note_content]\n    data = []\n    for title, content in zip(playbook_zts_azure_disable_user_1_output_note_title_values, playbook_zts_azure_disable_user_1_output_note_content_values):\n        \n        data.append({\n            \"title\": title,\n            \"content\": content\n        })\n\n    if get_task_data__urls is not None:\n        for url in get_task_data__urls:\n            for item in data:\n                parameters.append({\n                    \"body\": json.dumps(item),\n                    \"location\": url,\n                })\n    phantom.debug(parameters)\n\n",
                     "warnings": {},
                     "x": 0,
-                    "y": 1264
+                    "y": 1260
                 },
                 "37": {
                     "data": {
@@ -683,13 +684,13 @@
         "output_spec": null,
         "playbook_type": "automation",
         "python_version": "3",
-        "schema": "5.0.9",
-        "version": "6.0.0.114228"
+        "schema": "5.0.10",
+        "version": "6.0.1.123902"
     },
-    "create_time": "2023-03-16T07:41:02.650128+00:00",
+    "create_time": "2023-07-06T15:12:03.043821+00:00",
     "draft_mode": false,
     "labels": [
-        "*"
+        "encoded_ps"
     ],
     "tags": []
 }
