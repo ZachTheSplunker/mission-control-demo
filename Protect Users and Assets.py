@@ -555,7 +555,7 @@ def protect_prompt(action=None, success=None, container=None, results=None, hand
         }
     ]
 
-    phantom.prompt2(container=container, user=user, role=role, message=message, respond_in_mins=30, name="protect_prompt", parameters=parameters, response_types=response_types, callback=protect_prompt_callback)
+    phantom.prompt2(container=container, user=user, role=role, message=message, respond_in_mins=70, name="protect_prompt", parameters=parameters, response_types=response_types, callback=protect_prompt_callback)
 
     return
 
