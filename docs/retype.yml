@@ -1,0 +1,23 @@
+input: .
+output: .retype
+url: mc.zachthesplunker.com
+branding:
+  title: MC Remediation
+  label: Demo
+  # colors:
+  #   label:
+  #     text: "#fff"
+  #     background: "#FC0000"
+links:
+- text: GitHub
+  link: https://github.com/ZachTheSplunker/mission-control-demo
+  target: blank
+  icon: mark-github
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved.\nMade with :icon-heart-fill: by [ZachTheSplunker](https://www.linkedin.com/in/zachthesplunker/){ target=blank }"
+  links: 
+    - text: Connect with ZachTheSplunker on LinkedIn
+      link: https://www.linkedin.com/in/zachthesplunker/
+      target: blank
+markdown:
+  lineBreaks: hard

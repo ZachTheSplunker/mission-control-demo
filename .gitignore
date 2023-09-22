@@ -1,1 +1,10 @@
-.DS_Store
+.DS_STORE
+**/local
+local.meta
+__pycache__/
+.vscode
+venv
+.idea
+Pipfile**
+retype.manifest
+.retype/**

@@ -2,7 +2,7 @@
 
 After adding the playbooks to Splunk Soar and updating the Response Plan you can launch an embeded playbook during the "Render Verdict" phase to automatically contain assets. By saying "no" to one of the actions still gives you the ability to follow-up with an "ad-hoc" action to contain an artifact.
 
-![MC Contain](img/mc_prompt.png)
+![MC Contain](docs/assets/mc_prompt.png)
 
 ## How do I use these playbooks?
 
@@ -18,7 +18,15 @@ After adding the playbooks to Splunk Soar and updating the Response Plan you can
 5. Check (Enable) "Read Only"
 6. Save Changes
 
-![Source Control](img/soar_source_control.png)
+![Source Control](docs/assets/soar_source_control.png)
+
+### Set playbook to "Active"
+
+1. In Splunk Soar, navigate to Playbooks.
+2. Using the filter textbox, type "Protect Users."
+3. Set the "Protect Users and Assets" playbook to be "Active" using the Status dropdown.
+
+![Playbook](docs/assets/soar_playbook.png)
 
 ### Add playbook to Response plan in Mission Control
 
@@ -27,8 +35,8 @@ After adding the playbooks to Splunk Soar and updating the Response Plan you can
 3. For the "Render Verdict" phase, Select the task "Take Remediation Action or Close Incident."
 4. Add the Playbook `Protect Users and Assets` to the task. 
 
-![Response Plan](img/mc_response_plan.png)
+![Response Plan](docs/assets/mc_response_plan.png)
 
 ### Running the playbook
 
-Once you run the playbook, you will have to manually click the "bell" icon in the upper right of the screen to reveal the notifications. You can then select the prompt.
+The playbook will automatically execute for the encoded powershell incident. You will have to manually click the "bell" icon in the upper right of the screen to reveal the notifications. You can then select the prompt.
