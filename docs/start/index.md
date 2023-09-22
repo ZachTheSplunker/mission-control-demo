@@ -17,11 +17,17 @@ https://github.com/ZachTheSplunker/mission-control-demo.git
 
 ||| Path to Playbooks
 ```
-playbooks
+playbooks/
 ```
 |||
 
 ||| Repo Name
+```
+mission-control-demo
+```
+|||
+
+||| Branch Name
 ```
 main
 ```
