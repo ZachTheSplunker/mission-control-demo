@@ -5,7 +5,7 @@ label: Home
 
 # Mission Control Remediation
 
-After adding the playbooks to Splunk Soar and updating the Response Plan you can launch an embeded playbook during the "Render Verdict" phase to automatically contain assets. By saying "no" to one of the actions still gives you the ability to follow-up with an "ad-hoc" action to contain an artifact.
+After adding the playbooks to Splunk SOAR and updating the Response Template, the embedded playbook automatically executes for the "Render Verdict" phase to contain assets automatically. Saying "no" to one of the actions still allows you to follow up with an "ad-hoc" action to contain an artifact.
 
 ![MC Contain](assets/mc_prompt.png)
 
